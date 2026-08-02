@@ -494,6 +494,10 @@ footer img {
     justify-content: center;
   }
 
+  .services h2 {
+    text-align: center;
+  }
+
   .services-grid {  
    grid-template-columns: 1fr;
     width: 100%;

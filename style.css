@@ -327,9 +327,11 @@ html {
 }
 
 .links-grid p {
+  font-size: 1.1rem;
   background-color: #f3f0ee;
   padding: 5px 25px;
   border-radius: 50px;
+  align-content: center;
 }
 
 .com-sur {
@@ -477,6 +479,14 @@ footer img {
   .main-div h2,
   .diferencial h2 {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .nav-dif-ind {
+    width: 100%;
+    justify-items: center;
+    margin: auto;
+    padding: 5px;
   }
 
   .contato2 {
@@ -508,6 +518,8 @@ footer img {
     .about {
         grid-template-columns: 1fr;
         height: auto;
+        margin: auto;
+        padding: 25px;
     }
 
     .about-me {

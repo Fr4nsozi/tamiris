@@ -110,7 +110,7 @@ html {
 .img-psi {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  /* object-fit: contain; */
   min-width: 0;
   min-height: 0;
 }
@@ -196,6 +196,7 @@ html {
   transform: rotate(3deg);
   transition-timing-function: linear;
   transition: 0.125s;
+  object-fit: cover;
 }
 
 .img-psi:hover {
@@ -234,7 +235,8 @@ html {
 }
 
 .nav-dif-ind {
-  width: 400px;
+  max-width: 400px;
+  min-width: auto;
   background-color: #ffdcc6;
   border-radius: 10px;
   padding: 20px;
@@ -408,9 +410,10 @@ html {
 .img-psi2 {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  
   min-width: 0;
   min-height: 0;
+  object-fit: cover;
 }
 
 .img-psi2 {
@@ -450,12 +453,108 @@ footer img {
   gap: 75px;
 }
 
+@media (max-width: 1400px){
+  .psicoterapia {
+    display: none;
+  }
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+  }
+  .psi-ind {
+    grid-column: 1/4;
+  }
+
+  .wor-pal {
+    grid-column: 1/4;
+  }
+
+  .sup-emo {
+    grid-column: 2/4  ;
+  }
+
+  .sobre-libras {
+    display: none;
+  }
+   .nav-dif {
+    flex-direction: column;
+  }
+  
+   .nav-dif-ind {
+    max-width: 600px;
+  }
+   
+  .about {
+    height: auto;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .links-grid p {
+    font-size: 1rem;
+  }
+
+   .about {
+        grid-template-columns: 1fr;
+        height: auto;
+        margin: auto;
+        padding: 25px;
+    }
+    .about-me {
+        width: 100%;
+        order: 1
+    }
+     .img-psi2 {
+        order:2
+    }
+}
+
+@media (max-width: 900px) {
+   .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .links-grid p {
+      margin: 0px;
+  }
+
+.links-header {
+    display: none;
+  }
+  .img-psi {
+    display: none;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+   
+  .header {
+    justify-content: center;
+    gap: 50px;
+  }
+  .logo_name {
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 600px) {
   .main {
     margin-top: 75px;
     grid-template-columns: 1fr;
     height: auto;
   }
+
+  .logo_name {
+    object-fit: cover;
+  }
+
   .logo_name h1 {
     display: none;
   }
@@ -468,10 +567,6 @@ footer img {
     display: none;
   }
 
-  .nav-dif {
-    flex-direction: column;
-  }
-
   .sobre-libras {
     display: none;
   }
@@ -479,7 +574,7 @@ footer img {
   .main-div h2,
   .diferencial h2 {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
   }
 
   .nav-dif-ind {
@@ -501,6 +596,10 @@ footer img {
   .services-grid {  
    grid-template-columns: 1fr;
     width: 100%;
+  }
+
+  .psi-ind, .com-sur, .sup-emo, .wor-pal {
+    grid-column: 1;
   }
 
   .links-grid {
